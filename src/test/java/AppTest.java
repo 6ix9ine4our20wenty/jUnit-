@@ -10,4 +10,9 @@ public class AppTest {
         testee = new Calculator();
         assertTrue(testee.summe(10,20) == 30);
     }
+    @Test
+        public void testSubtraction(){
+        testee = new Calculator();
+        assertTrue(testee.subtraktion(25, 10) == 15);
+    }
 }
