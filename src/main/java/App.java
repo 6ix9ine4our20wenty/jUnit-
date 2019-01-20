@@ -9,7 +9,7 @@ public class App {
 
         System.out.println("Console Calculator\n" +
                 "=====================\n" +
-                "\n");
+                "Bitte Zahlen eingeben");
 
         String valueA = scanner.next();
         String valueB = scanner.next();
