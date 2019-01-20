@@ -49,8 +49,6 @@ Addition
         /*
     Subtraktion
         */
-
-
     @Test
     public void testDifferenzPositive() {
         assertTrue(testee.differenz(10, 20) == -10);
@@ -83,6 +81,45 @@ Addition
     public void testDifferenzOverflow() {
         testee = new Calculator();
         assertEquals((long) Integer.MIN_VALUE - 1, testee.differenz(Integer.MIN_VALUE, 1));
+    }
+
+    /*
+    Division
+     */
+
+
+    @Test
+    public void testMultiplikationPositive() {
+        assertTrue(testee.multiplikation(10, 20) == 200);
+    }
+    @Test
+    public void testMultiplikationNegative() {
+        assertTrue(testee.multiplikation(-20, -10) == 200);
+    }
+    @Test
+    public void testMultiplikationPositiveNegative() {
+        assertTrue(testee.multiplikation(-10, 20) == -200);
+    }
+    @Test
+    public void testMultiplikationNegativePositive() {
+        assertTrue(testee.multiplikation(10, -20) == -200);
+    }
+    @Test
+    public void testMultiplikationZero() {
+        assertTrue(testee.multiplikation(0, 20) == 0);
+    }
+    @Test
+    public void testMultiplikationZeroNegative() {
+        assertTrue(testee.multiplikation(0, -2) == 0);
+    }
+    @Test
+    public void testMultiplikationLargenumbers() {
+        assertTrue(testee.multiplikation(100, 20000) ==   2000000);
+    }
+    @Test(expected = ArithmeticException.class)
+    public void testMultiplikationOverflow() {
+        testee = new Calculator();
+        assertEquals((long) Integer.MIN_VALUE * 1, testee.differenz(Integer.MIN_VALUE, 1));
     }
 
 }
