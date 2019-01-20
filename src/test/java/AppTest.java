@@ -16,31 +16,31 @@ Addition
     }
     @Test
     public void testSummePositive() {
-        Assert.assertTrue(testee.summe(10, 20) == 30);
+        assertTrue(testee.summe(10, 20) == 30);
     }
     @Test
     public void testSummeNegative() {
-        Assert.assertTrue(testee.summe(-20, -10) == -30);
+        assertTrue(testee.summe(-20, -10) == -30);
     }
     @Test
     public void testSummePositiveNegative() {
-        Assert.assertTrue(testee.summe(-10, 20) == 10);
+        assertTrue(testee.summe(-10, 20) == 10);
     }
     @Test
     public void testSummeNegativePositive() {
-        Assert.assertTrue(testee.summe(10, -20) == -10);
+        assertTrue(testee.summe(10, -20) == -10);
     }
     @Test
     public void testSummeZero() {
-        Assert.assertTrue(testee.summe(0, 20) == 20);
+        assertTrue(testee.summe(0, 20) == 20);
     }
     @Test
     public void testSummeRounding() {
-        Assert.assertTrue(testee.summe(5 / 2, 2) == 4);
+        assertTrue(testee.summe(5 / 2, 2) == 4);
     }
     @Test
     public void testSummeLargenumbers() {
-        Assert.assertTrue(testee.summe(1000000, 2000000) == 3000000);
+       assertTrue(testee.summe(1000000, 2000000) == 3000000);
     }
     @Test(expected = ArithmeticException.class)
     public void testSummeOverflow() {
@@ -53,31 +53,31 @@ Addition
 
     @Test
     public void testDifferenzPositive() {
-        Assert.assertTrue(testee.differenz(10, 20) == -10);
+        assertTrue(testee.differenz(10, 20) == -10);
     }
     @Test
     public void testDifferenzNegative() {
-        Assert.assertTrue(testee.differenz(-20, -10) == -10);
+        assertTrue(testee.differenz(-20, -10) == -10);
     }
     @Test
     public void testDifferenzPositiveNegative() {
-        Assert.assertTrue(testee.differenz(-10, 20) == -30);
+        assertTrue(testee.differenz(-10, 20) == -30);
     }
     @Test
     public void testDifferenzNegativePositive() {
-        Assert.assertTrue(testee.differenz(10, -20) == 30);
+        assertTrue(testee.differenz(10, -20) == 30);
     }
     @Test
     public void testDifferenzZero() {
-        Assert.assertTrue(testee.differenz(0, 20) == -20);
+        assertTrue(testee.differenz(0, 20) == -20);
     }
     @Test
     public void testDifferenzRounding() {
-        Assert.assertTrue(testee.differenz(5 / 2, 2) == 0);
+        assertTrue(testee.differenz(5 / 2, 2) == 0);
     }
     @Test
     public void testDifferenzLargenumbers() {
-        Assert.assertTrue(testee.differenz(1000000, 2000000) == -1000000);
+        assertTrue(testee.differenz(1000000, 2000000) == -1000000);
     }
     @Test(expected = ArithmeticException.class)
     public void testDifferenzOverflow() {
