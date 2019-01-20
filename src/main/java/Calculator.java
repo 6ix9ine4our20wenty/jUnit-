@@ -1,10 +1,22 @@
 public class Calculator {
-        public int summe(int summand1, int summand2){
+    int summe(int value1, int value2) {
+        long tester = (long) value1 + (long) value2;
+        overflowhandler(tester);
+        return (int) tester;
+    }
+    int differenz(int value1, int value2) {
+        long tester = (long) value1 - (long) value2;
+        overflowhandler(tester);
+        return (int) tester;
+    }
 
-            return summand1 + summand2;
+    private void overflowhandler(long tester) {
+        if (tester > Integer.MAX_VALUE) {
+            throw new ArithmeticException("too big");
         }
-        public int differenz(int subtrahend1, int subtrahend2){
-            return subtrahend1 - subtrahend2;
+        if (tester < Integer.MIN_VALUE) {
+            throw new ArithmeticException("too small");
         }
+    }
 
 }
