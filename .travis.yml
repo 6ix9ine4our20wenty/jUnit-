@@ -1,3 +1,11 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: sXkY3q/iKZ8TAgp2d/uEBV/sAYTE6+ULbJaj2YxVEfYegzFtKhwu4GpFrxag55DnOlJ4miSAgkkkU6EwTwH1fhDBTGdpyypurPXtlc4AgSnu93+3N9faz3IswNUYa7rC1/fR17rWJ3hRqJZ6VYc6hLeJ2VfeyvaZPTPoatSBdlCNiIEdRzr5yO9Vu4NvW+a7V0vggE7cd8ZQRgQRmvDL2yXn42OGhF13BDDwM0QqQ7KIXHWLB2HCSkevsUxQ4cwY/BQj8HfS1Fh/950ZloN+3L+PiZzI6yp8ScRE6o9giU060gmiSFMqyHh7o7nMpuv4qZZhRj77JRPonJQV6hKedXPrSVUkiD0CQiUq2Y/qYVsJ32NwfyfGweydgSfCTRaPFP57XDuAAqQZae7art7aLpd5THJHojF0Js7nhqyd/gyuk38S6wqzugKM3jfcejB5THIhIH+3OuT4gcjC86rl/2KKXuBelDbrJo43pW0EcvdIQlBhKvwV9UYrqp7Ve1TwzvZSzRHVsb3TdvpVeAszkGn5YmMuanESxhOWaJHFRfMNyh9omUx4aM/qjzv5tk2qsZFNZ3vGT54u9pOvi+VXdHGe8DF2ahqs9Sh3LG1k68Fy34p3gIkcZzSbVZLAodLtXDix68IiP0UwV/Dolu2hrN58dgPR1YNB8grZUdY9UtQ=
+  file: "/home/travis/.m2/repository/ch/bbw/MavenCalculator/1.0-SNAPSHOT/MavenCalculator-1.0-SNAPSHOT.jar"
+  on:
+    repo: 6ix9ine4our20wenty/jUnit-
+    branch: ImplementMultiplikation
