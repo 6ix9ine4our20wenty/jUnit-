@@ -9,8 +9,8 @@ public class Calculator {
         overflowhandler(tester);
         return (int) tester;
     }
-    int division(int value1, int value2) {
-        long tester = (long) value1 / (long) value2;
+    int multiplikation(int value1, int value2) {
+        long tester = (long) value1 * (long) value2;
         overflowhandler(tester);
         return (int) tester;
     }

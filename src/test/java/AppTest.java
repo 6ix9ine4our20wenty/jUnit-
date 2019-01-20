@@ -89,37 +89,37 @@ Addition
 
 
     @Test
-    public void testDivisionPositive() {
-        assertTrue(testee.division(10, 20) == 0);
+    public void testMultiplikationPositive() {
+        assertTrue(testee.multiplikation(10, 20) == 200);
     }
     @Test
-    public void testDivisionNegative() {
-        assertTrue(testee.division(-20, -10) == 0);
+    public void testMultiplikationNegative() {
+        assertTrue(testee.multiplikation(-20, -10) == 200);
     }
     @Test
-    public void testDivisionPositiveNegative() {
-        assertTrue(testee.division(-10, 20) == -0);
+    public void testMultiplikationPositiveNegative() {
+        assertTrue(testee.multiplikation(-10, 20) == -200);
     }
     @Test
-    public void testDivisionNegativePositive() {
-        assertTrue(testee.division(10, -20) == -0);
+    public void testMultiplikationNegativePositive() {
+        assertTrue(testee.multiplikation(10, -20) == -200);
     }
     @Test
-    public void testDivisionZero() {
-        assertTrue(testee.differenz(0, 20) == 0);
+    public void testMultiplikationZero() {
+        assertTrue(testee.multiplikation(0, 20) == 0);
     }
     @Test
-    public void testDivisionRounding() {
-        assertTrue(testee.differenz(5 / 2, 2) == 1);
+    public void testMultiplikationZeroNegative() {
+        assertTrue(testee.multiplikation(0, -2) == 0);
     }
     @Test
-    public void testDivisionLargenumbers() {
-        assertTrue(testee.differenz(1000000, 2000000) ==   0);
+    public void testMultiplikationLargenumbers() {
+        assertTrue(testee.multiplikation(100, 20000) ==   2000000);
     }
     @Test(expected = ArithmeticException.class)
-    public void testDivisionOverflow() {
+    public void testMultiplikationOverflow() {
         testee = new Calculator();
-        assertEquals((long) Integer.MIN_VALUE / 1, testee.differenz(Integer.MIN_VALUE, 1));
+        assertEquals((long) Integer.MIN_VALUE * 1, testee.differenz(Integer.MIN_VALUE, 1));
     }
 
 }
